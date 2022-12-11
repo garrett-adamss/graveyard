@@ -1,17 +1,17 @@
 <template>
   <header>
-    <Navbar />
+    <!-- <Navbar /> -->
   </header>
   <main>
     <router-view />
   </main>
-   <footer>
+   <!-- <footer>
     <p>Made by garrett-adamss
       <a class="" href="https://github.com/garrett-adamss/graveyard" alt="GitHub source link">
         &lt;source code/&gt;
       </a>
     </p>
-  </footer>
+  </footer> -->
 </template>
 
 <script>
