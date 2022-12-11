@@ -33,7 +33,6 @@ export default {
     const handleScroll = (evt) => {
       const scrollY = window.scrollY
       let viewValue = (100 * (window.scrollY)) / window.innerHeight
-
       first.value.style.opacity = (100 - (scrollY + window.innerHeight - first.value.offsetHeight)) / 100
 
       second.value.style.opacity = ((scrollY + window.innerHeight - second.value.offsetTop) / 100) 
@@ -55,10 +54,10 @@ export default {
         
       foreground1.value.style.left = (-viewValue * 0.2) + 'vw'
       foreground2.value.style.right = (-viewValue * 0.2) + 'vw'
-
+    
       if(viewValue >= 100){
         router.push({name: 'Shop'})
-        // console.log("test")
+        evt.preventDefault()
       }
       
     }
@@ -128,7 +127,6 @@ img.background{
 }
 
 .section-2-text-box {
-  background-color: rgba(255, 255, 255, 0.7);
   color: black;
   text-align: center;
   padding: 50px;

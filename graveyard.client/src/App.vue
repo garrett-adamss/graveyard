@@ -3,7 +3,7 @@
     <!-- <Navbar /> -->
   </header>
   <main>
-    <transition name="zoom">
+    <transition name="zoom" mode="default">
       <router-view />
     </transition>
   </main>
@@ -38,12 +38,21 @@ export default {
 }
 
 //Fade transition
+// .fade-enter-active, .fade-leave-active {
+//     transition: opacity 0.5s ease-out;
+//   }
+// .fade-enter-from, .fade-leave-to {
+//     opacity: 0;
+//   }
+
+//Zoom 
 .zoom-enter-active, .zoom-leave-active {
-    transition: all 1s;
-  }
-  .zoom-enter, .zoom-leave-to {
-    opacity: scale(0);
-  }
+  transition: all .25s;
+  opacity: 0;
+}
+.zoom-enter, .zoom-leave-to {
+  transform: scale(1);
+}
 
 // FOOTER
 
