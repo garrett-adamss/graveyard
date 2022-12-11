@@ -3,7 +3,9 @@
     <!-- <Navbar /> -->
   </header>
   <main>
-    <router-view />
+    <transition name="zoom">
+      <router-view />
+    </transition>
   </main>
    <!-- <footer>
     <p>Made by garrett-adamss
@@ -34,6 +36,14 @@ export default {
 :root{
   --main-height: calc(100vh - 32px - 64px);
 }
+
+//Fade transition
+.zoom-enter-active, .zoom-leave-active {
+    transition: all 1s;
+  }
+  .zoom-enter, .zoom-leave-to {
+    opacity: scale(0);
+  }
 
 // FOOTER
 

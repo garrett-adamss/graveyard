@@ -10,7 +10,6 @@
     </div>
     <div class="section section-2" ref="second">
       <div class="section-2-text-box">
-        <p>Continue to Store</p>
       </div>
     </div>
 
@@ -18,7 +17,9 @@
 </template>
 
 <script>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted,  } from 'vue'
+import { router } from '../router';
+
 export default {
   setup() {
     onMounted(() => {
@@ -31,22 +32,34 @@ export default {
 
     const handleScroll = (evt) => {
       const scrollY = window.scrollY
+      let viewValue = (100 * (window.scrollY)) / window.innerHeight
 
       first.value.style.opacity = (100 - (scrollY + window.innerHeight - first.value.offsetHeight)) / 100
 
-      second.value.style.opacity = (scrollY + window.innerHeight - second.value.offsetTop) / 100
+      second.value.style.opacity = ((scrollY + window.innerHeight - second.value.offsetTop) / 100) 
 
       const maxBackgroundSize = 120;
       const backgroundSize = scrollY / (maxBackgroundSize - 100)
 
-      background.value.style.transform = 
-      'scale(' + (100 + backgroundSize * 0.4) / 100 + ')'
-      // foreground1.value.style.transform = 'scale(' + (100 + backgroundSize) / 100 + ')' 
-      // foreground2.value.style.transform = 'scale(' + (100 + backgroundSize) / 100 + ')'
-      foreground1.value.style.transform = 'translateY(' + (100 + backgroundSize) / 100  + ')'
 
+      // SCALE
+      background.value.style.transform = 'scale(' + (100 + backgroundSize * 0.4) / 100 + ')'
+      foreground1.value.style.transform = 'scale(' + (100 + backgroundSize) / 100 + ')' 
+      foreground2.value.style.transform = 'scale(' + (100 + backgroundSize) / 100 + ')'
 
+      // Scroll
+      foreground1.value.style.top = (viewValue) + 50 + "vh"
+      foreground2.value.style.top = (viewValue) + 50 + 'vh'
 
+      // Position
+        
+      foreground1.value.style.left = (-viewValue * 0.2) + 'vw'
+      foreground2.value.style.right = (-viewValue * 0.2) + 'vw'
+
+      if(viewValue >= 100){
+        router.push({name: 'Shop'})
+        // console.log("test")
+      }
       
     }
 
@@ -101,7 +114,7 @@ img.background{
   color: white;
   left: 50%;
   right: 50%;
-  bottom: 0;
+  bottom: 10vh;
   transform: translate(-50%, -50%);
 }
 
