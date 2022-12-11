@@ -5,8 +5,12 @@
   <main>
     <router-view />
   </main>
-   <footer class="bg-dark text-light">
-    Made with 💖 by CodeWorks
+   <footer>
+    <p>Made by garrett-adamss
+      <a class="" href="https://github.com/garrett-adamss/graveyard" alt="GitHub source link">
+        &lt;source code/&gt;
+      </a>
+    </p>
   </footer>
 </template>
 
@@ -31,10 +35,29 @@ export default {
   --main-height: calc(100vh - 32px - 64px);
 }
 
+// FOOTER
 
 footer {
   display: grid;
   place-content: center;
   height: 32px;
 }
+
+footer p{
+  font-size: 18px;
+}
+
+footer a{
+  text-decoration: none;
+  color: black;
+  transition: transform 250ms;
+}
+
+footer a:hover{
+  background-color: rgb(90, 90, 90);
+  color: whitesmoke;
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
 </style>
