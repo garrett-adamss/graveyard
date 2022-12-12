@@ -1,12 +1,14 @@
 <template>
   <h1>Shop </h1>
-  <img src="https://thiscatdoesnotexist.com/"/>
-  <img src="https://thiscatdoesnotexist.com/"/>
-  <img src="https://thiscatdoesnotexist.com/"/>
-  <img src="https://thiscatdoesnotexist.com/"/>
-  <img src="https://thiscatdoesnotexist.com/"/>
-  <img src="https://thiscatdoesnotexist.com/"/>
-  <img src="https://thiscatdoesnotexist.com/"/>
+  <div class="container-fluid">
+    <div class="row">
+      <ItemCard/>
+      <ItemCard/>
+      <ItemCard/>
+      <ItemCard/>
+      <ItemCard/>
+    </div>
+  </div>
 
 </template>
 
