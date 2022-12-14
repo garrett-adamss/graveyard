@@ -20,12 +20,13 @@
       <ul class="navbar-nav me-auto">
         <li>
           <router-link :to="{ name: 'Contact' }" class="btn text-light lighten-30 selectable text-uppercase">
-            About
+            Contact
           </router-link>
         </li>
       </ul>
       <!-- LOGIN COMPONENT HERE -->
-      <Login />
+      <!-- <Login /> -->
+      <i class="mdi mdi-cart text-light shopping-cart"></i>
     </div>
   </nav>
 </template>
@@ -53,11 +54,13 @@ a:hover {
 }
 
 .navbar-nav .router-link-exact-active {
-  border-bottom: 2px solid var(--bs-success);
+  border-bottom: 2px solid whitesmoke;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-
+.shopping-cart{
+  font-size: 25px;
+}
 @media screen and (min-width: 768px) {
   nav {
     height: 64px;

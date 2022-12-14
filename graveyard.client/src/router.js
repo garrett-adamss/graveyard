@@ -12,9 +12,9 @@ const routes = [
     component: loadPage('HomePage')
   },
   {
-    path: '/about',
-    name: 'About',
-    component: loadPage('AboutPage')
+    path: '/contact',
+    name: 'Contact',
+    component: loadPage('ContactPage')
   },
   {
     path: '/account',
@@ -26,6 +26,11 @@ const routes = [
     path: '/shop',
     name: 'Shop',
     component: loadPage('ShopPage')
+  },
+  {
+    path: '/item/:id',
+    name: 'ItemDetails',
+    component: loadPage('ItemDetailsPage')
   },
 ]
 
