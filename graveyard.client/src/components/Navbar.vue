@@ -29,7 +29,7 @@
       </ul>
       <!-- LOGIN COMPONENT HERE -->
       <!-- <Login /> -->
-      <i class="mdi mdi-cart text-light shopping-cart"></i>
+      <i class="mdi mdi-cart text-light shopping-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
     </div>
   </nav>
 </template>

@@ -6,6 +6,7 @@
     <transition name="zoom" mode="default">
       <router-view />
     </transition>
+    <CartOffCanvas/>
   </main>
    <!-- <footer>
     <p>Made by garrett-adamss
@@ -36,14 +37,6 @@ export default {
 :root{
   --main-height: calc(100vh - 32px - 64px);
 }
-
-//Fade transition
-// .fade-enter-active, .fade-leave-active {
-//     transition: opacity 0.5s ease-out;
-//   }
-// .fade-enter-from, .fade-leave-to {
-//     opacity: 0;
-//   }
 
 //Zoom 
 .zoom-enter-active, .zoom-leave-active {
