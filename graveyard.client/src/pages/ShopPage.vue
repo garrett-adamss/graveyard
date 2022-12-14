@@ -1,5 +1,4 @@
 <template>
-  <h1>GraveYardBoise</h1>
   <div class="container-fluid">
     <div class="row">
       <div class="col-2">
@@ -17,9 +16,6 @@
             T-shirts
           </div>
         </div>
-        <div class="contact">
-          <i class="mdi mdi-contact"></i>
-        </div>
         <div>
 
         </div>
@@ -29,7 +25,12 @@
           <ItemCard/>
           <ItemCard/>
           <ItemCard/>
-           <ItemCard/>
+          <ItemCard/>
+          <ItemCard/>
+          <ItemCard/>
+          <ItemCard/>
+          <ItemCard/>
+          <ItemCard/>
           <ItemCard/>
         </div>
       </div>
