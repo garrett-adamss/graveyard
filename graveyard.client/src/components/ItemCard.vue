@@ -24,7 +24,9 @@ export default {
     width: -webkit-fill-available;
 }
 .item-card{
-    background-color: rgb(205, 205, 205);
+    /* background-color: rgb(205, 205, 205); */
+    border-style: solid;
+    border-color: red;
     
 }
 .name{
