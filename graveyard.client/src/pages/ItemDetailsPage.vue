@@ -1,5 +1,5 @@
 <template>
-    items detail page
+    <h1>Specific item details go here</h1>
 </template>
  
 <script>

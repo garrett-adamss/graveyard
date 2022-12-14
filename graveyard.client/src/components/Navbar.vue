@@ -22,6 +22,9 @@
           <router-link :to="{ name: 'Contact' }" class="btn text-light lighten-30 selectable text-uppercase">
             Contact
           </router-link>
+          <router-link :to="{ name: 'Reviews' }" class="btn text-light lighten-30 selectable text-uppercase">
+            Reviews
+          </router-link>
         </li>
       </ul>
       <!-- LOGIN COMPONENT HERE -->

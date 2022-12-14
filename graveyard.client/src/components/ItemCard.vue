@@ -13,12 +13,23 @@
 </template>
  
 <script>
+import { router } from '../router'
 import { logger } from '../utils/Logger'
 import Pop from '../utils/Pop'
 
 export default {
    setup(){
       return {
+        toItemDetailsPage(){
+            try {
+                        // params: { id: AppState.user.id }
+               router.push({name: 'ItemDetails', params: {id: '1'}})
+            }
+            catch (error) {
+               logger.error(error)
+               Pop.toast(error.message, 'error')
+            }
+        },
         toggleHeart(){
             try {
                 this.outlined = !this.outlined;

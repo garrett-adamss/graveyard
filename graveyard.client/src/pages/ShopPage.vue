@@ -1,18 +1,18 @@
 <template>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-2">
-        <div class="input-group rounded">
+    <div class="row mt-2">
+      <div class="col-2 mt-4">
+        <div class="input-group rounded mb-5">
           <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
           <span class="input-group-text border-0" id="search-addon">
           <i class="mdi mdi-magnify"></i>
           </span>
         </div>
-        <div class="filter">
-          <div>
+        <div class="filter-section">
+          <div class="filter">
             All
           </div>
-          <div>
+          <div class="filter">
             T-shirts
           </div>
         </div>
@@ -46,5 +46,11 @@ export default {
 </script>
 
 <style>
+.filter{
+  font-size: 20px
+}
+.filter:hover{
+  cursor: pointer;
+}
 
 </style>

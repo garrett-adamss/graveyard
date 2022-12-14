@@ -28,6 +28,11 @@ const routes = [
     component: loadPage('ShopPage')
   },
   {
+    path: '/reviews',
+    name: 'Reviews',
+    component: loadPage('ReviewsPage')
+  },
+  {
     path: '/item/:id',
     name: 'ItemDetails',
     component: loadPage('ItemDetailsPage')

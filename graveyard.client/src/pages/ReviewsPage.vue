@@ -1,5 +1,5 @@
 <template>
-   <h1>Contact details and location details go here</h1>
+ <h1>User Reviews go here</h1>
 </template>
  
 <script>
