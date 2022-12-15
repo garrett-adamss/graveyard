@@ -33,6 +33,11 @@ const routes = [
     component: loadPage('ReviewsPage')
   },
   {
+    path: '/checkout',
+    name: 'Checkout',
+    component: loadPage('CheckoutPage')
+  },
+  {
     path: '/item/:id',
     name: 'ItemDetails',
     component: loadPage('ItemDetailsPage')
